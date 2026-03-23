@@ -1,0 +1,7 @@
+# vs code settings
+.vscode
+settings.json
+
+# python cache files
+__pychache__
+*.pyc
