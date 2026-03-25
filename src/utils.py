@@ -36,3 +36,36 @@ def read_obj(in_file):
     faces = torch.transpose(faces, 0, 1) # shape = n_faces, 3
 
     return verts, faces
+
+
+### WEIGHT INITIALIZATION
+
+def weights_init_ae(m):
+    classname = m.__class__.__name__
+    if classname in ('Conv1d', 'Linear'):
+        torch.nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
+        if m.bias is not None:
+            torch.nn.init.constant_(m.bias, 0)
+
+def weights_init_avae(m):
+    classname = m.__class__.__name__
+    if classname in ('Conv1d', 'Linear'):
+        torch.nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
+        if m.bias is not None:
+            torch.nn.init.constant_(m.bias, 0)
+
+def weights_init_vae(m):
+    classname = m.__class__.__name__
+    if classname.find('Conv') != -1:
+        gain = torch.nn.init.calculate_gain('relu')
+        torch.nn.init.xavier_uniform_(m.weight, gain)
+        if m.bias is not None:
+            torch.nn.init.constant_(m.bias, 0)
+    elif classname.find('BatchNorm') != -1:
+        torch.nn.init.constant_(m.weight, 1)
+        torch.nn.init.constant_(m.bias, 0)
+    elif classname.find('Linear') != -1:
+        gain = torch.nn.init.calculate_gain('relu')
+        torch.nn.init.xavier_uniform_(m.weight, gain)
+        if m.bias is not None:
+            torch.nn.init.constant_(m.bias, 0)

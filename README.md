@@ -33,8 +33,8 @@ Pre-trained AE/VAE encoder and decoder weights for different mesh resolutions.
 Setup with conda:
 
 ```bash
-> conda create -n aneu_latent_space_env -c conda-forge python=3.11 trame trame-vuetify trame-vtk trame-components trame-plotly plotly pyvista numpy pandas
-> conda activate aneu_latent_space_env
+> conda create -n ls_env -c conda-forge python=3.11 trame trame-vuetify trame-vtk trame-components trame-plotly plotly pyvista numpy pandas
+> conda activate ls_env
 > pip install libigl
 ```
 
