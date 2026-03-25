@@ -32,6 +32,10 @@ Pre-trained AE/VAE encoder and decoder weights for different mesh resolutions.
 
 `LatentSpaceVisualizer.py` Small application to interactively explore the created latent spaces.
 
+<p align="center">
+  <img src=".github/demo.gif" alt="Latent space visualizer demo" width="1280">
+</p>
+
 ## Dependencies
 
 Setup with conda:
