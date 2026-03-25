@@ -9,7 +9,9 @@
 
 ### 02_experiments
 
-- ...
+- `train_ae.py`Autoencoder training script; unsupervised.
+- `train_vae.py` Variational autoencoder training script; unsupervised.
+- `train_vae_classifier.py` Variational autoencoder with MLP head training script (for classification only); semi-supervised.
 
 ### data
 
@@ -25,6 +27,8 @@ Contains pre-build face matrices for visualizer. Can be used for other data (mes
 ### weights
 
 Pre-trained AE/VAE encoder and decoder weights for different mesh resolutions.
+
+### Visualizer
 
 `LatentSpaceVisualizer.py` Small application to interactively explore the created latent spaces.
 
