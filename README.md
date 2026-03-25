@@ -1,23 +1,23 @@
 # Aneurysm Latent Space
 
 ## Files
-**01_preprocessing**
+### 01_preprocessing
 - `remesh_aneurysms.py` Register, resample, and remesh aneurysm sacs with consistent vertex ordering.
 - `measure_aneurysms.py` Compute size and shape measures for aneurysm geometries.
 
-**02_experiments**
+### 02_experiments
 - ...
 
-**data**
+### data
 Contains pre-build face matrices for visualizer. Can be used for other data (meshes, labels) as well.
 
-**src**
+### src
 - `dataset.py` Aneurysm mesh dataset loader for Pytorch.
 - `pointnet_ae.py` PointNet autoencoder.
 - `pointnet_vae.py` PointNet variational autoencoder with KLD.
 - `utils.py` Additional loading utilities.
 
-**weights**
+### weights
 Pre-trained AE/VAE encoder and decoder weights for different mesh resolutions.
 
 `LatentSpaceVisualizer.py` Small application to interactively explore the created latent spaces.
