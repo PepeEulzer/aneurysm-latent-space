@@ -36,6 +36,10 @@ Pre-trained AE/VAE encoder and decoder weights for different mesh resolutions.
   <img src=".github/demo.gif" alt="Latent space visualizer demo" width="1280">
 </p>
 
+<p align="center">
+  <img src=".github/reconstruction.gif" alt="Latent space visualizer demo" width="1280">
+</p>
+
 ## Dependencies
 
 Setup with conda:
